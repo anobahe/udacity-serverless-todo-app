@@ -48,34 +48,34 @@ custom:
         version: '1.0.0'
         title: Serverless todo API
         description: Serverless todo application for record keeping
-    models:
-      - name: CreateTodoRequest
-        contentType: "application/json"
-        schema:
-          required:
-            - name
-            - dueDate
-          properties:
-            name:
-              minLength: 1
-              type: string
-            dueDate:
-              type: string
-      - name: UpdateTodoRequest
-        contentType: "application/json"
-        schema:
-          required:
-            - name
-            - dueDate
-            - done
-          properties:
-            name:
-              minLength: 1
-              type: string
-            dueDate:
-              type: string
-            done:
-              type: boolean
+    # models:
+    #   - name: CreateTodoRequest
+    #     contentType: "application/json"
+    #     schema:
+    #       required:
+    #         - name
+    #         - dueDate
+    #       properties:
+    #         name:
+    #           minLength: 1
+    #           type: string
+    #         dueDate:
+    #           type: string
+    #   - name: UpdateTodoRequest
+    #     contentType: "application/json"
+    #     schema:
+    #       required:
+    #         - name
+    #         - dueDate
+    #         - done
+    #       properties:
+    #         name:
+    #           minLength: 1
+    #           type: string
+    #         dueDate:
+    #           type: string
+    #         done:
+    #           type: boolean
 
 
 package:
@@ -210,7 +210,7 @@ functions:
           - xray:PutTraceSegments
         Resource: 
           - '*' 
-          
+
 resources:
   Resources:
     TodosTable:
